@@ -22,14 +22,12 @@ jobs:
           distribution: "temurin"
           cache: maven
 
-      - name: Build with Maven
-        run: ./mvnw -B package
-        # If you don't have Maven Wrapper, use:
-        # run: mvn -B package --file pom.xml
+      - name: Build BountySystem
+        run: mvn -B clean package --file BountySystem/pom.xml
 
       - name: Upload plugin JAR
         uses: actions/upload-artifact@v4
         with:
           name: BountySystem
-          path: target/BountySystem-*.jar
+          path: BountySystem/target/BountySystem-*.jar
           if-no-files-found: error
