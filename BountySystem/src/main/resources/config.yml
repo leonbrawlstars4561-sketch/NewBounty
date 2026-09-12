@@ -1,0 +1,40 @@
+# =========================================================
+#  BountySystem - Konfiguration
+#  Farbcodes mit & werden automatisch umgewandelt (z.B. &a = gruen).
+#  Platzhalter wie %player% oder %amount% werden durch die
+#  jeweiligen Werte ersetzt.
+# =========================================================
+
+# Kleinster Betrag, der als Bounty ausgesetzt werden darf.
+# Unterstuetzt dieselbe Schreibweise wie /bounty add (z.B. "100", "1k").
+minimum-amount: "1"
+
+# Wenn true, wird die Auszahlung eines Bountys beim Tod des Ziels
+# server-weit angekuendigt. Wenn false, bekommt nur der Killer eine Nachricht.
+broadcast-bounty-payout: true
+
+messages:
+  usage-add: "&cVerwendung: /bounty add <Spieler> <Betrag>"
+  usage-show: "&cVerwendung: /bounty <Spieler>"
+  admin-usage: "&cVerwendung: /%command% reload"
+  players-only: "&cDieser Befehl kann nur von Spielern verwendet werden."
+  no-permission: "&cDu hast keine Berechtigung, diesen Befehl zu verwenden."
+  player-not-found: "&cSpieler &e%player% &cwurde nicht gefunden."
+  invalid-amount: "&cUngueltiger Betrag: &e%amount%&c. Beispiele: 1000, 1.5k, 2.75b, 10t, 1q"
+  amount-too-low: "&cDer Betrag muss mindestens %minimum% betragen."
+  insufficient-funds: "&cDu hast nicht genuegend Geld fuer diesen Betrag."
+  transaction-failed: "&cDie Transaktion konnte nicht abgeschlossen werden."
+  economy-unavailable: "&cEs ist derzeit kein Economy-Plugin verfuegbar. Bitte installiere Vault und ein kompatibles Economy-Plugin wie EternalEconomy."
+  bounty-added-sender: "&aYou added &e$%amount% &ato %target%'s bounty"
+  bounty-added-target: "&a%sender% added &e$%amount% &ato your Bounty"
+  bounty-cancelled: "&7Bounty-Vorgang abgebrochen."
+  bounty-show-none: "&7Auf &e%player% &7ist derzeit kein Bounty ausgesetzt."
+  bounty-show-has: "&7Bounty auf &e%player%&7: &a$%amount%"
+  bounty-paid: "&6%killer% &7hat das Bounty auf &6%victim% &7in Hoehe von &a$%amount% &7eingeloest!"
+  bounty-self-paid: "&6%player% &7hat sich selbst getoetet und das eigene Bounty in Hoehe von &a$%amount% &7kassiert!"
+  reload-success: "&aKonfiguration wurde neu geladen."
+  reload-economy-warning: "&eKonfiguration wurde neu geladen, aber es wurde weiterhin kein Economy-Plugin gefunden."
+  gui-title: "&8Bounty bestaetigen"
+  gui-confirm-item: "&aBestaetigen"
+  gui-cancel-item: "&cAbbrechen"
+  gui-info-item-name: "&eBounty auf %player%"

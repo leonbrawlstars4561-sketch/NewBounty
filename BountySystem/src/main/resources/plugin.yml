@@ -1,0 +1,27 @@
+name: BountySystem
+version: '${project.version}'
+main: dev.bountysystem.plugin.BountyPlugin
+api-version: '1.26'
+author: BountySystem
+description: Produktionsreifes Bounty-System mit Vault- und EternalEconomy-Unterstuetzung.
+softdepend: [Vault, EternalEconomy]
+
+commands:
+  bounty:
+    description: Setze oder zeige Bountys.
+    usage: /<command> add <Spieler> <Betrag>  oder  /<command> <Spieler>
+  bountyadmin:
+    description: Administrative Bounty-Befehle.
+    aliases: [bountyad]
+    usage: /<command> reload
+
+permissions:
+  bounty.add:
+    description: Erlaubt das Aussetzen von Bountys mit /bounty add.
+    default: true
+  bounty.show:
+    description: Erlaubt das Anzeigen von Bountys mit /bounty <Spieler>.
+    default: true
+  bounty.admin:
+    description: Erlaubt administrative Befehle wie /bountyadmin reload.
+    default: op
