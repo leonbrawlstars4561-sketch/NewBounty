@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,7 +12,6 @@
     <packaging>jar</packaging>
 
     <name>BountySystem</name>
-    <description>Bounty System Minecraft Plugin</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,45 +19,31 @@
     </properties>
 
     <repositories>
-
-        <!-- Paper -->
         <repository>
             <id>papermc</id>
             <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
 
-        <!-- VaultAPI -->
         <repository>
-            <id>jitpack.io</id>
+            <id>jitpack</id>
             <url>https://jitpack.io</url>
         </repository>
-
     </repositories>
 
     <dependencies>
 
-        <!-- Paper API -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>26.2.build.121-stable</version>
+            <version>26.2.build.123-stable</version>
             <scope>provided</scope>
         </dependency>
 
-        <!-- Vault API -->
-        <!-- Wichtig: alte Bukkit-Abhängigkeit NICHT mitziehen -->
         <dependency>
             <groupId>com.github.MilkBowl</groupId>
             <artifactId>VaultAPI</artifactId>
             <version>1.7.1</version>
             <scope>provided</scope>
-
-            <exclusions>
-                <exclusion>
-                    <groupId>org.bukkit</groupId>
-                    <artifactId>bukkit</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
     </dependencies>
@@ -68,7 +53,6 @@
 
         <plugins>
 
-            <!-- Java 25 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -78,7 +62,6 @@
                 </configuration>
             </plugin>
 
-            <!-- JAR bauen -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
