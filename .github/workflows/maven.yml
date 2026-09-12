@@ -23,11 +23,13 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn -B package --file BountySystem/pom.xml
+        run: ./mvnw -B package
+        # If you don't have Maven Wrapper, use:
+        # run: mvn -B package --file pom.xml
 
       - name: Upload plugin JAR
         uses: actions/upload-artifact@v4
         with:
           name: BountySystem
-          path: BountySystem/target/BountySystem-*.jar
+          path: target/BountySystem-*.jar
           if-no-files-found: error
