@@ -138,7 +138,8 @@ public final class BountyConfirmationService {
     }
 
     private void closeNextTick(Player player) {
-        Bukkit.getScheduler().runTask(plugin, player::closeInventory);
+        Bukkit.getScheduler().runTask(plugin, (Runnable) player::closeInventory);
+
     }
 
     private ItemStack infoItem(String targetName, BigDecimal amount) {
